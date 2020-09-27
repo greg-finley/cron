@@ -1,0 +1,28 @@
+{
+  "name": "post-random-uuids-to-twitter",
+  "version": "1.0.0",
+  "description": "Post random uuids to Twitter",
+  "main": "index.js",
+  "scripts": {
+    "post-random-uuid-to-twitter": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greg-finley/post-random-uuids-to-twitter.git"
+  },
+  "keywords": [
+    "uuid",
+    "twitter"
+  ],
+  "author": "Greg Finley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greg-finley/post-random-uuids-to-twitter/issues"
+  },
+  "homepage": "https://github.com/greg-finley/post-random-uuids-to-twitter#readme",
+  "dependencies": {
+    "dotenv": "8.2.0",
+    "twitter": "1.7.1",
+    "uuid": "8.3.0"
+  }
+}
