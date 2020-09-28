@@ -1,6 +1,8 @@
 # cron
 Random cron toys
 
+Install: `npm install`
+
 ## post-random-uuids-to-twitter
 
 Run: `npm run post-random-uuids-to-twitter`
