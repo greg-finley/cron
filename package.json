@@ -1,14 +1,17 @@
 {
-  "name": "post-random-uuids-to-twitter",
+  "name": "cron",
   "version": "1.0.0",
-  "description": "Post random uuids to Twitter",
-  "main": "index.js",
+  "description": "Random cron toys",
   "scripts": {
-    "post-random-uuid-to-twitter": "node index.js"
+    "build": "tsc --incremental",
+    "lint": "npm run test:lint -- --fix",
+    "post-random-uuid-to-twitter": "npm run build && node dist/post-random-uuid-to-twitter.js",
+    "test": "npm-run-all test:*",
+    "test:lint": "eslint --cache --cache-location './.eslintcache' 'src/**/*.ts'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/greg-finley/post-random-uuids-to-twitter.git"
+    "url": "git+https://github.com/greg-finley/cron.git"
   },
   "keywords": [
     "uuid",
@@ -17,12 +20,26 @@
   "author": "Greg Finley",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/greg-finley/post-random-uuids-to-twitter/issues"
+    "url": "https://github.com/greg-finley/cron/issues"
   },
-  "homepage": "https://github.com/greg-finley/post-random-uuids-to-twitter#readme",
+  "homepage": "https://github.com/greg-finley/cron#readme",
   "dependencies": {
     "dotenv": "8.2.0",
     "twitter": "1.7.1",
     "uuid": "8.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "14.11.2",
+    "@types/twitter": "1.7.0",
+    "@types/uuid": "8.3.0",
+    "@typescript-eslint/eslint-plugin": "4.2.0",
+    "@typescript-eslint/parser": "4.2.0",
+    "eslint": "7.10.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-config-prettier": "6.12.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-prettier": "3.1.4",
+    "npm-run-all": "4.1.5",
+    "typescript": "4.0.3"
   }
 }
