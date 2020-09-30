@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Random cron toys",
   "scripts": {
+    "post-if-64-degrees": "node src/post-if-64-degrees.js",
     "post-random-uuid-to-twitter": "node src/post-random-uuid-to-twitter.js"
   },
   "repository": {
@@ -20,7 +21,9 @@
   },
   "homepage": "https://github.com/greg-finley/cron#readme",
   "dependencies": {
+    "axios": "0.20.0",
     "dotenv": "8.2.0",
+    "memjs": "1.2.2",
     "twitter": "1.7.1",
     "uuid": "8.3.0"
   }

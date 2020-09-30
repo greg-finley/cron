@@ -10,3 +10,9 @@ Run: `npm run post-random-uuids-to-twitter`
 Add some entropy to the universe.
 
 https://twitter.com/Random_UUID
+
+## post-if-64-degrees
+
+Run: `npm run post-if-64-degrees`
+
+https://twitter.com/colma64degrees
