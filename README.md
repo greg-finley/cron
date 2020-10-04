@@ -5,7 +5,7 @@ Install: `npm install`
 
 ## post-random-uuids-to-twitter
 
-Run: `npm run post-random-uuids-to-twitter`
+Run: `npm run post-random-uuid-to-twitter`
 
 Add some entropy to the universe.
 
