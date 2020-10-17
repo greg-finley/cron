@@ -13,7 +13,7 @@ async function main() {
         password: process.env.MEMCACHEDCLOUD_PASSWORD
       });
       const timeEpoch = response.dt;
-      const time = new Date(timeEpoch*1000).toLocaleString("en-US", {timeZone: "America/Los_Angeles"});
+      const time = roundToHour(new Date(timeEpoch*1000)).toLocaleString("en-US", {timeZone: "America/Los_Angeles"})
       const exists = await memcachedClient.get(timeEpoch.toString());
 
       console.log(exists)
@@ -34,7 +34,7 @@ async function main() {
           access_token_secret: process.env.WEATHER_ACCESS_TOKEN_SECRET
         });
 
-      const status = `It's ${temp}°F in ${cityName} as of ${roundToHour(new Date(timeEpoch*1000)).toLocaleString("en-US", {timeZone: "America/Los_Angeles"})}`
+      const status = `It's ${temp}°F in ${cityName} as of ${time}`
 
       console.log(`Posting to Twitter about temp: ${status}`)
 
