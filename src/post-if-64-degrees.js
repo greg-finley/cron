@@ -34,7 +34,7 @@ async function main() {
           access_token_secret: process.env.WEATHER_ACCESS_TOKEN_SECRET
         });
 
-      const status = `It's ${temp}°F in ${cityName} as of ${time}`
+      const status = `It's ${temp}°F in ${cityName} as of ${roundToHour(new Date(timeEpoch*1000)).toLocaleString("en-US", {timeZone: "America/Los_Angeles"})}`
 
       console.log(`Posting to Twitter: ${status}`)
 
@@ -45,6 +45,11 @@ async function main() {
     } else {
       console.log(`Oh shoot, temp was ${temp}`)
     }
+}
+
+function roundToHour(date) {
+  p = 60 * 60 * 1000; // milliseconds in an hour
+  return new Date(Math.round(date.getTime() / p ) * p);
 }
 
 main().then(() => console.log('Done'))
