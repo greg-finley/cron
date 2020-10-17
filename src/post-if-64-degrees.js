@@ -36,7 +36,7 @@ async function main() {
 
       const status = `It's ${temp}°F in ${cityName} as of ${roundToHour(new Date(timeEpoch*1000)).toLocaleString("en-US", {timeZone: "America/Los_Angeles"})}`
 
-      console.log(`Posting to Twitter: ${status}`)
+      console.log(`Posting to Twitter about temp: ${status}`)
 
       twitterClient.post('statuses/update', {status},  function(error) {
         if(error) throw error;
