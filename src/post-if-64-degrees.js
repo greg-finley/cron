@@ -13,7 +13,7 @@ async function main() {
         password: process.env.MEMCACHEDCLOUD_PASSWORD
       });
       const timeEpoch = response.dt;
-      const time = roundToHour(new Date(timeEpoch*1000)).toLocaleString("en-US", {timeZone: "America/Los_Angeles"})
+      const time = roundToHour(new Date(timeEpoch*1000)).toLocaleString("en-US", {timeZone: "America/Los_Angeles", year: "numeric", month: "numeric", day: "numeric", hour: "numeric"})
       const exists = await memcachedClient.get(timeEpoch.toString());
 
       console.log(exists)
